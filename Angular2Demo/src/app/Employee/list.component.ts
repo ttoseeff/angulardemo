@@ -7,6 +7,7 @@
 })
 export class EmployeeListComponent {
     employees: any[];
+    selectDropDownValue: string="All";
     constructor() {
         this.employees = [
             {
@@ -66,5 +67,9 @@ export class EmployeeListComponent {
 
     getTotalFemaleEmployeeCount(): number {
         return this.employees.filter(e => e.gender === 'Female').length;
+    }
+
+    GetRadioButtonValue(selectDropDownValue:string) {
+        this.selectDropDownValue = selectDropDownValue;
     }
 }

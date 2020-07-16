@@ -11,8 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var EmployeeCountComponent = (function () {
     function EmployeeCountComponent() {
+        this.selectDropDownValue = "All";
         this.EventEmitterCall = new core_1.EventEmitter();
+        this.myvalue = "adsf";
     }
+    EmployeeCountComponent.prototype.onselectDropDownValue = function () {
+        this.EventEmitterCall.emit(this.selectDropDownValue);
+    };
     return EmployeeCountComponent;
 }());
 __decorate([

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var EmployeeListComponent = (function () {
     function EmployeeListComponent() {
+        this.selectDropDownValue = "All";
         this.employees = [
             {
                 code: 'emp101', name: 'Tom', gender: 'Male',
@@ -65,6 +66,9 @@ var EmployeeListComponent = (function () {
     };
     EmployeeListComponent.prototype.getTotalFemaleEmployeeCount = function () {
         return this.employees.filter(function (e) { return e.gender === 'Female'; }).length;
+    };
+    EmployeeListComponent.prototype.GetRadioButtonValue = function (selectDropDownValue) {
+        this.selectDropDownValue = selectDropDownValue;
     };
     return EmployeeListComponent;
 }());

@@ -13,8 +13,13 @@ export class EmployeeCountComponent {
     @Input()
     female: number;
 
+    selectDropDownValue: string = "All";
+
     @Output()
     EventEmitterCall: EventEmitter<string> = new EventEmitter<string>();
 
     myvalue: string = "adsf";
+    onselectDropDownValue() {
+        this.EventEmitterCall.emit(this.selectDropDownValue);
+    }
 }
