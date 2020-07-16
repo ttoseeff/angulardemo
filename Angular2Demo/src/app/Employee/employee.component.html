@@ -1,0 +1,47 @@
+﻿<table>
+    <tr>
+        <td>
+            first Name
+        </td>
+        <td>
+            {{firstname}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Last Name
+        </td>
+        <td>
+            {{lastname}}
+        </td>
+    </tr>
+    <tr *ngIf="showDetail">
+        <td>
+            Gender
+        </td>
+        <td>
+            {{gender}}
+        </td>
+
+    <tr *ngIf="showDetail">
+        <td>
+            Age
+        </td>
+        <td>
+            {{age}}
+        </td>
+    </tr>
+</table>
+
+
+<button (click)="showDetails()">{{showDetail ? "Hide" : "Show"}} Details</button>
+<button on-click="onClick();">Click me</button>
+<br />
+<input type="text" [value]="name" (input)="name=$event.target.value" />
+your value is : {{name}}
+<br />
+<br />
+<input type="text" [(ngModel)]="ngmodel" />
+your value is : {{ngmodel}}
+<br />
+

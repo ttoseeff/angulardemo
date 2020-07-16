@@ -1,0 +1,17 @@
+﻿<button class="colorClass">button</button> <span> this will show only color class</span>
+<br />
+<br />
+<button class="colorClass" [class]="myClasses">button</button> <span>this will show myClasses variable classes.</span>
+<br />
+<br />
+<button class="colorClass italicsClass boldClass" [class.boldClass]="!applyboldClass">button</button> <span>boldClass will remove.</span>
+<br />
+<br />
+<button [ngClass]="addClasses()">button</button> <span>ngClass</span>
+
+<div>
+    Style Binding
+</div>
+<button style="color:red;" [style.fontWeight]="isBold ? 'bold' : 'normal'">button</button>
+<button style="color:red" [style.font-size.px]="fontSize">button</button>
+<button style="color:red" [ngStyle]="addStyles()">button</button>

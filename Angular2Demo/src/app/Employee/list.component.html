@@ -1,0 +1,45 @@
+﻿
+<employee-count [all]="getTotalEmployeeCount()"
+                [male]="getTotalMaleEmployeeCount()"
+                [female]="getTotalFemaleEmployeeCount()"
+                ></employee-count>
+<br />
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Annual Salary</th>
+            <th>Date of Birth</th>
+            <th>Is Even</th>
+            <th>Is Odd</th>
+            <th>Is First</th>
+            <th>Is Last</th>
+            <th>Index</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees;trackBy:gettrackcode;let isEven=even;let isOdd=odd;let isFirst=first;let isLast =last;let i = index">
+            <td>{{employee.code | uppercase}}</td>
+            <td>{{employee.name |EmployeeTitle:employee.gender }}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.annualSalary | currency:'USD':true:'1.2-2'}}</td>
+            <td>{{employee.dateOfBirth | date:'dd/MM/y'}}</td>
+            <td [style.color]="isEven ? 'green' : 'black' ">{{isEven}}</td>
+            <td [style.color]="isOdd ? 'green' : 'black' ">{{isOdd}}</td>
+            <td [style.color]="isFirst ? 'green' : 'black' ">{{isFirst}}</td>
+            <td [style.color]="isLast ? 'green' : 'black' ">{{isLast}}</td>
+            <td [style.color]="'green'">{{i}}</td>
+        </tr>
+        <tr *ngIf="!employees || employees.length==0">
+            <td colspan="5">
+                No Employees to display
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button (click)='getEmployees()'>Refresh Employees</button>

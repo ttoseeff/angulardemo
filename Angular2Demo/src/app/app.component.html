@@ -1,0 +1,34 @@
+﻿<div *ngIf="false">
+    <h1>{{pageHeader}}</h1>
+    <h1>
+        {{firstname}}
+    </h1>
+    <h1>
+        {{10+20+30}}
+    </h1>
+    <h1>
+        {{firstname ? firstname : 'No Name specified'}}
+    </h1>
+    <h1>
+        <img src="{{imagePath}}" />
+    </h1>
+    <h1>
+        <img bind-src="imagePath" />
+    </h1>
+    <h1>
+        <img [src]="imagePath" />
+    </h1>
+
+    <h1>
+        {{'Full Name = '+ getFullName()}}
+    </h1>
+    <div>
+        <input type="text" id="inputId" name="name" value="Toseef" />
+    </div>
+    <button disabled="'{{isdisabled}}">interpolation does not work</button>
+    <button [disabled]="isdisabled">Property bind works</button>
+    <my-emp>Loading EmployeeComponent... </my-emp>
+</div>
+
+<list-emp>Loading ...</list-emp>
+<!--<tutorial-select></tutorial-select>-->
