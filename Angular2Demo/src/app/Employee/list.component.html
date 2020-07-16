@@ -1,5 +1,5 @@
 ﻿
-<employee-count [all]="getTotalEmployeeCount()"
+<employee-count *ngIf="employees" [all]="getTotalEmployeeCount()"
                 [male]="getTotalMaleEmployeeCount()"
                 [female]="getTotalFemaleEmployeeCount()"
                 (EventEmitterCall)="GetRadioButtonValue($event)"></employee-count>
@@ -37,8 +37,13 @@
                 <td [style.color]="'green'">{{i}}</td>
             </tr>
         </ng-container>
-        <tr *ngIf="!employees || employees.length==0">
-            <td colspan="5">
+        <tr *ngIf="!employees">
+            <td colspan="9">
+                {{ServiceError}}
+            </td>
+        </tr>
+        <tr *ngIf="employees && employees.length==0">
+            <td colspan="9">
                 No Employees to display
             </td>
         </tr>

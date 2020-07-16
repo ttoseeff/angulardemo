@@ -75,6 +75,8 @@
     <Content Include="src\app\Employee\employeeCount.component.html" />
     <Content Include="src\app\Employee\list.component.css" />
     <Content Include="src\app\Employee\list.component.html" />
+    <Content Include="src\app\Simple\simple.component.css" />
+    <Content Include="src\app\Simple\simple.component.html" />
     <Content Include="src\app\tutorial\tutorial.component.css" />
     <Content Include="src\app\tutorial\tutorial.component.html" />
     <Content Include="src\favicon.ico" />
@@ -109,7 +111,10 @@
     <TypeScriptCompile Include="src\app\Employee\employee.component.ts" />
     <TypeScriptCompile Include="src\app\Employee\employeeCount.component.ts" />
     <TypeScriptCompile Include="src\app\Employee\employeeTitle.pipe.ts" />
+    <TypeScriptCompile Include="src\app\Employee\IEmployee.ts" />
     <TypeScriptCompile Include="src\app\Employee\list.component.ts" />
+    <TypeScriptCompile Include="src\app\Employee\Service\EmployeeService.ts" />
+    <TypeScriptCompile Include="src\app\Simple\simple.component.ts" />
     <TypeScriptCompile Include="src\app\tutorial\tutorial.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>

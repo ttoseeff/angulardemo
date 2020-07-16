@@ -17,4 +17,5 @@ export class AppComponent {
     getFullName(): string {
         return this.firstname + this.lastname;
     }
+    EnteredValue: string = "Toseef";
 }

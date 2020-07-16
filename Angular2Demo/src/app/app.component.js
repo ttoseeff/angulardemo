@@ -14,6 +14,7 @@ var AppComponent = (function () {
         this.firstname = "Toseef";
         this.lastname = "Ahmad";
         this.imagePath = "http://studyabroad.pk/UserEnd/Design/images/logo.png";
+        this.EnteredValue = "Toseef";
     }
     AppComponent.prototype.getFullName = function () {
         return this.firstname + this.lastname;
