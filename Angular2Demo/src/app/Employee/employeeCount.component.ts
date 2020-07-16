@@ -16,8 +16,5 @@ export class EmployeeCountComponent {
     @Output()
     EventEmitterCall: EventEmitter<string> = new EventEmitter<string>();
 
-
-
-
-
+    myvalue: string = "adsf";
 }
