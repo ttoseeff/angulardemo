@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var EmployeeCountComponent = (function () {
     function EmployeeCountComponent() {
+        this.EventEmitterCall = new core_1.EventEmitter();
     }
     return EmployeeCountComponent;
 }());
@@ -26,6 +27,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Number)
 ], EmployeeCountComponent.prototype, "female", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], EmployeeCountComponent.prototype, "EventEmitterCall", void 0);
 EmployeeCountComponent = __decorate([
     core_1.Component({
         selector: 'employee-count',
