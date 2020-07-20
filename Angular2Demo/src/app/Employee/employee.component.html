@@ -1,4 +1,40 @@
-﻿<table>
+﻿
+    <table *ngIf="employee">
+        <thead>
+            <tr>
+                <th colspan="5">Employee Detials</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>code</td>
+                <td>{{employee.code}}</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>{{employee.name}}</td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td>{{employee.gender}}</td>
+            </tr>
+            <tr>
+                <td>annualSalary</td>
+                <td>{{employee.annualSalary}}</td>
+            </tr>
+            <tr>
+                <td>dateOfBirth</td>
+                <td>{{employee.dateOfBirth}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table *ngIf="!employee">
+        <tr>
+            <td>{{statusMessage}}</td>
+        </tr>
+    </table>
+
+<table>
     <tr>
         <td>
             first Name

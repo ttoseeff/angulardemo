@@ -17,11 +17,21 @@ namespace AngularWebApi.Controllers
                 return db.tEmployees.ToList();
             }
         }
-        public List<tEmployee> Get(string code)
+        public tEmployee Get(string code)
         {
             using (OrganizationDBEntities db = new OrganizationDBEntities())
             {
-                return db.tEmployees.Where(x=>x.code==code).ToList();
+                var emp = db.tEmployees.Where(x=>x.code==code).FirstOrDefault();
+                return emp;
+            }
+        }
+        [HttpGet]
+        [Route("{test}-in-{city}")]
+        public List<tEmployee> test(string test,string city="", string code="emp01")
+        {
+            using (OrganizationDBEntities db = new OrganizationDBEntities())
+            {
+                return db.tEmployees.Where(x => x.code == code).ToList();
             }
         }
     }

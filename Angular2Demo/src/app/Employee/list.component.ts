@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 
 @Component({
     selector: "list-emp",
-    templateUrl: "app/employee/list.component.html",
+    templateUrl: "./list.component.html",
     styleUrls: ["app/employee/list.component.css"],
     providers: [EmployeeService]
 })

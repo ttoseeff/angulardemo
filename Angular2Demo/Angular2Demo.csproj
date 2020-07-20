@@ -267,6 +267,8 @@
     <TypeScriptCompile Include="src\app\Employee\IEmployee.ts" />
     <TypeScriptCompile Include="src\app\Employee\list.component.ts" />
     <TypeScriptCompile Include="src\app\Employee\Service\EmployeeService.ts" />
+    <TypeScriptCompile Include="src\app\Error\PageNotFound.component.ts" />
+    <TypeScriptCompile Include="src\app\Home\home.component.ts" />
     <TypeScriptCompile Include="src\app\Simple\simple.component.ts" />
     <TypeScriptCompile Include="src\app\tutorial\tutorial.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
