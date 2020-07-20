@@ -15,17 +15,16 @@ require("rxjs/add/operator/map");
 require("rxjs/add/operator/catch");
 require("rxjs/add/observable/throw");
 var EmployeeService = (function () {
-    function EmployeeService(_http, code) {
+    function EmployeeService(_http) {
         this._http = _http;
-        this.code = code;
     }
     EmployeeService.prototype.getEmployees = function () {
         return this.employees = this._http.get("http://localhost:64933/api/employee")
             .map(function (response) { return response.json(); })
             .catch(this.CatchError);
     };
-    EmployeeService.prototype.getEmployeesByCode = function () {
-        return this._http.get("http://localhost:64933/api/employee?code=" + this.code)
+    EmployeeService.prototype.getEmployeesByCode = function (code) {
+        return this._http.get("http://localhost:64933/api/employee?code=" + code)
             .map(function (response) { return response.json(); })
             .catch(this.CatchError);
     };
@@ -37,7 +36,7 @@ var EmployeeService = (function () {
 }());
 EmployeeService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http, String])
+    __metadata("design:paramtypes", [http_1.Http])
 ], EmployeeService);
 exports.EmployeeService = EmployeeService;
 //# sourceMappingURL=EmployeeService.js.map

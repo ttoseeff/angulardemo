@@ -14,6 +14,7 @@ import { SimpleComponent } from './simple/simple.component';
 import { HomeComponent } from "./home/home.component"
 import { PageNotFoundComponent } from "./error/PageNotFound.component"
 import { EmployeeService } from "./Employee/Service/EmployeeService"
+import { ColorPreferences } from './Employee/Service/ColorPreferences';
 
 const appRoutes: Routes = [
     {

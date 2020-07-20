@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var EmployeeService_1 = require("./Service/EmployeeService");
+var ColorPreferences_1 = require("./Service/ColorPreferences");
 var EmployeeListComponent = (function () {
-    function EmployeeListComponent(_employeeService) {
+    function EmployeeListComponent(_employeeService, _colorPreferences) {
         this._employeeService = _employeeService;
+        this._colorPreferences = _colorPreferences;
         this.ServiceError = "Loading.....";
         this.selectDropDownValue = "All";
     }
@@ -24,6 +26,16 @@ var EmployeeListComponent = (function () {
             console.error(error);
         });
     };
+    Object.defineProperty(EmployeeListComponent.prototype, "color", {
+        get: function () {
+            return this._colorPreferences.colorPreference;
+        },
+        set: function (value) {
+            this._colorPreferences.colorPreference = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     EmployeeListComponent.prototype.getEmployees = function () {
     };
     EmployeeListComponent.prototype.gettrackcode = function (index, employee) {
@@ -50,7 +62,7 @@ EmployeeListComponent = __decorate([
         styleUrls: ["app/employee/list.component.css"],
         providers: [EmployeeService_1.EmployeeService]
     }),
-    __metadata("design:paramtypes", [EmployeeService_1.EmployeeService])
+    __metadata("design:paramtypes", [EmployeeService_1.EmployeeService, ColorPreferences_1.ColorPreferences])
 ], EmployeeListComponent);
 exports.EmployeeListComponent = EmployeeListComponent;
 //# sourceMappingURL=list.component.js.map

@@ -20,7 +20,7 @@ export class EmployeeComponent implements OnInit {
         let name: string = this._activatedRoute.snapshot.params['name'];
         let show: string = "code:" + code + " name:" + name;
 
-        this._EmployeeService.getEmployeesByCode().subscribe(
+        this._EmployeeService.getEmployeesByCode(code).subscribe(
             (data) => {
                 if (data == null) {
                     this.statusMessage = "Nothing to display";

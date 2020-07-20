@@ -10,8 +10,7 @@ import "rxjs/add/observable/throw"
 @Injectable()
 export class EmployeeService {
     code: string;
-    constructor(private _http: Http, code: string) {
-        this.code = code;
+    constructor(private _http: Http) {
     }
 
     employees:  Observable<IEmployee[]>;
@@ -22,8 +21,8 @@ export class EmployeeService {
             .catch(this.CatchError);
     }
 
-    getEmployeesByCode(): Observable<IEmployee> {
-        return this._http.get("http://localhost:64933/api/employee?code=" + this.code)
+    getEmployeesByCode(code: string): Observable<IEmployee> {
+        return this._http.get("http://localhost:64933/api/employee?code=" + code)
             .map((response: Response) => <IEmployee>response.json())
             .catch(this.CatchError);
     }

@@ -29,7 +29,7 @@ var EmployeeComponent = (function () {
         var code = this._activatedRoute.snapshot.params['code'];
         var name = this._activatedRoute.snapshot.params['name'];
         var show = "code:" + code + " name:" + name;
-        this._EmployeeService.getEmployeesByCode().subscribe(function (data) {
+        this._EmployeeService.getEmployeesByCode(code).subscribe(function (data) {
             if (data == null) {
                 _this.statusMessage = "Nothing to display";
             }

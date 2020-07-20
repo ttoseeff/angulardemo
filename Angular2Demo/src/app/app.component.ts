@@ -1,9 +1,11 @@
 import { Component, ChangeDetectorRef } from "@angular/core";
+import { ColorPreferences } from "./Employee/Service/ColorPreferences";
 
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html'
+    templateUrl: 'app/app.component.html',
+    providers: [ColorPreferences]
 })
 
 export class AppComponent {
